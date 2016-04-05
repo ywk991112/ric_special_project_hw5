@@ -1,0 +1,26 @@
+{
+  "name": "special_project_hw5",
+  "version": "1.0.0",
+  "description": "This is a package for Ric's special project hw5. Credit by kwei.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ywk991112/ric_special_project_hw5.git"
+  },
+  "keywords": [
+    "Ric",
+    "special",
+    "project",
+    "hw5",
+    "kwei"
+  ],
+  "author": "kwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ywk991112/ric_special_project_hw5/issues"
+  },
+  "homepage": "https://github.com/ywk991112/ric_special_project_hw5#readme"
+}
