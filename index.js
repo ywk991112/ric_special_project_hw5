@@ -9,6 +9,14 @@ app.get('/', function(req, res) {
     res.send(body);
 });
 
+app.get('/api/query', function(req,res) {
+    var json = {};
+    json['x'] = req.query.x;
+    json['y'] = req.query.y;
+    
+    res.send(json);
+});
+
 app.listen(8000, function() {
     console.log('The app is listening to the port 8000');
 });
