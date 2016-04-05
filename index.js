@@ -1,4 +1,5 @@
 var express = require('express');
+var url = require('url');
 var app = express();
 
 app.get('/', function(req, res) {
@@ -15,6 +16,14 @@ app.get('/api/query', function(req,res) {
     json['y'] = req.query.y;
     
     res.send(json);
+});
+
+app.get('/api/user/:id', function(req,res) {
+    var data = {1: {id: 1, name: 'Joe', age: 18}, 
+                2: {id: 2, name: 'John', age: 22}};
+
+    var id = req.params.id;
+    res.send(data[id]);
 });
 
 app.listen(8000, function() {
