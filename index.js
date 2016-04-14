@@ -7,9 +7,19 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static('public')); //why put before app.get('*')
 
 app.get('/', function(req, res) {
-    var body = '<h1>首頁</h1>' +
-        '<h2>這是我的hw5</h2>' +
-        '<p>阿阿阿阿阿阿阿阿阿阿</p>';
+    var body = '<form action="/api/body" method="POST">' +
+            '<ul>' +
+                '<li>' +
+                    'name: <input name="name" val="hidden, but not secret!">' +
+                '</li>' +
+                '<li>' +
+                    '<label for="fieldColor"> Your favorite color:' + 
+                        '<input type="text" id="fieldColor" name="color">' +
+                    '</label>' +
+                '<li>' +
+            '</ul>' +
+            '<button type="submit">Submit</button>' +
+        '</form>'; 
     res.set('Content-Type', 'text/html');
     res.send(body);
 });
